@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Live Weather</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="weather-app">
+      <h1>Live Weather</h1>
+      <p class="subtitle">Real-time weather conditions using your location or a searched city.</p>
+
+      <form id="search-form" class="search-form">
+        <label for="city-input">Search city</label>
+        <div class="search-row">
+          <input id="city-input" name="city" type="text" placeholder="e.g. Seattle" required />
+          <button type="submit">Search</button>
+        </div>
+      </form>
+
+      <button id="location-btn" class="location-btn" type="button">Use my current location</button>
+
+      <section class="weather-card" aria-live="polite">
+        <h2 id="location-name">Loading weather...</h2>
+        <p id="updated-at">--</p>
+        <div class="metrics">
+          <div class="metric">
+            <span class="label">Condition</span>
+            <span id="condition">--</span>
+          </div>
+          <div class="metric">
+            <span class="label">Temperature</span>
+            <span id="temperature">--</span>
+          </div>
+          <div class="metric">
+            <span class="label">Wind</span>
+            <span id="wind">--</span>
+          </div>
+          <div class="metric">
+            <span class="label">Humidity</span>
+            <span id="humidity">--</span>
+          </div>
+        </div>
+      </section>
+
+      <p id="status" class="status"></p>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
